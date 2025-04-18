@@ -46,7 +46,13 @@ Nombre de bit à lire pour un message midi : 24  (3 * 8 bits).
 Donc quand CS_n est bas on lit MISO dès que SCK est à l'état haut. Pour détecter le prochain front montant 
 il faut attendre que SCK soit à l'état bas.
 ## Faisabilité sur le RP2040
-Le RP2040 n'est pas pourvu de l'interface SPI esclave par défaut alors on peut le programmer avec PIO qui est une sorte de processeur pour créer une interface matériel.
+Le RP2040 a des limitations sur le mode SPI esclave :
+- limité à une fréquence d'horloge de 10 MHz
+- les données doivent être traitées rapidement et via des interruptions
+- dépendance du SDK
+- problèmes reportés de compatibilité des modes SPI
+
+Le top : le programmer avec PIO qui est une sorte de processeur pour créer une interface matériel.
 
 MicroPython supporte PIO.
 
