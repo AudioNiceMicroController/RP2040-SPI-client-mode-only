@@ -40,6 +40,8 @@ CY7C68013A analyseur logique
 
 ### Message Midi On
 <img src="./img/1.png" alt="Texte alternatif" width="100%">
+
+### Message Midi Off
 <img src="./img/2.png" alt="Texte alternatif" width="100%">
 Nombre de bit à lire pour un message midi : 24  (3 * 8 bits).
 
